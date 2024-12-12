@@ -40,16 +40,15 @@ Authentication: JWT, OAuth
 Deployment: Docker, AWS, Heroku
 
 **Installation**
-
-Clone the repository:
+**Clone the repository:**
 git clone https://github.com/your-Doreen456/stockease.git
 
-Install dependencies:
+**Install dependencies:**
 cd stockease
 npm install
 Configure environment variables (e.g., database URL, API keys) in .env file.
 
-Run the development server:
+**Run the development server:**
 npm run dev
 Open the app in your browser at http://localhost:3000.
 
