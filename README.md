@@ -42,20 +42,14 @@ Deployment: Docker, AWS, Heroku
 **Installation**
 
 Clone the repository:
-**bash**
-Copy code
 git clone https://github.com/your-Doreen456/stockease.git
 
 Install dependencies:
-**bash**
-Copy code
 cd stockease
 npm install
 Configure environment variables (e.g., database URL, API keys) in .env file.
 
 Run the development server:
-**bash**
-Copy code
 npm run dev
 Open the app in your browser at http://localhost:3000.
 
