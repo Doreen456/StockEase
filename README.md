@@ -1,72 +1,280 @@
 **StockEase - Inventory & Stock Management System**
 StockEase is a user-friendly and comprehensive inventory management system designed to help businesses efficiently manage their products, track inventory levels, and streamline procurement and sales processes. With features like product categorization, real-time stock tracking, sales & purchase management, detailed reporting, and secure data handling, StockEase simplifies inventory operations for small to medium-sized businesses.
 
-**Features**
-**Inventory Management**
-Product Management: Add, edit, and update product details (name, SKU, category, reorder levels, supplier information).
-Stock Tracking: Monitor current inventory levels, set reorder alerts, and track stock movement (purchases, sales, returns).
-Stock History: Access detailed records of all stock activities for better analysis and decision-making.
+Many businesses still rely on notebooks or spreadsheets to manage inventory, leading to inaccurate stock records, stock shortages, duplicate entries, and poor reporting. StockEase provides a centralized web application that simplifies inventory tracking, sales management, supplier management, and business reporting.
 
-**Sales Management**
-Sales Transactions: Record sales transactions with product details, customer info, and sale prices.
-Reports: Generate sales reports for specific periods, analyze performance, and identify sales trends.
-Invoices & Refunds: Easily generate invoices and manage customer refunds.
+This project is being developed as a full-stack application using modern web technologies with a focus on clean architecture, scalability, and maintainability.
 
-**Purchase Management**
-Purchase Orders: Create and track purchase orders with suppliers for timely stock replenishment.
-Purchase History: Maintain records of all purchases, including supplier details, costs, and statuses.
-Reports & Analytics: Track purchase expenses and monitor supplier performance with detailed reports.
+---
 
-**User Management**
-Role-Based Access: Assign user roles (Admin, Sales Manager, Warehouse Staff) with specific permissions.
-User Logs: Track user activities and maintain a log of system changes.
+**Project Goals**
+- Reduce manual inventory management
+- Track stock movement in real time
+- Simplify sales and purchase workflows
+- Generate business reports
+- Provide secure role-based access
 
-**Dashboard & Reporting**
-Interactive Dashboard: Overview of stock levels, sales, and purchase activities in real-time.
-Custom Reports: Generate customized reports such as low-stock alerts and sales trends.
+---
 
-**Bulk Actions & Integration**
-Bulk Uploads: Upload product data via CSV or Excel for faster data entry.
-API Integration: Seamless integration with third-party systems (e.g., accounting, e-commerce platforms).
+**Current Features**
 
-**Security & Backup**
-Data Security: All sensitive data is encrypted and access is restricted to authorized users.
-Backup & Recovery: Regular backups to prevent data loss and ensure system reliability.
+## Authentication & User Management
+
+- Secure user authentication using JWT
+- Role-Based Access Control (RBAC)
+- User profile management
+- Password hashing and secure authentication
+- Protected application routes
+
+## Dashboard
+
+- Business overview dashboard
+- Inventory summary
+- Sales summary
+- Revenue overview
+- Low-stock alerts
+- Quick business statistics
+
+## Product Management
+
+- Add new products
+- Edit product information
+- Delete products
+- Product categorization
+- SKU management
+- Product pricing
+- Product search and filtering
+
+## Inventory Management
+
+- Real-time inventory tracking
+- Stock movement history
+- Inventory adjustments
+- Low stock monitoring
+- Out-of-stock notifications
+- Reorder level management
+
+## Supplier Management
+
+- Manage supplier information
+- Supplier contact details
+- Purchase history
+- Supplier performance tracking
+
+
+## Customer Management
+
+- Customer profiles
+- Customer purchase history
+- Contact management
+
+
+## Sales Management
+
+- Record sales transactions
+- Automatic inventory updates after sales
+- Sales history
+- Sales receipts
+- Revenue tracking
+
+
+## Reports & Analytics
+
+- Daily sales reports
+- Monthly sales reports
+- Inventory reports
+- Best-selling products
+- Low-stock reports
+- Business performance dashboard
+
+---
+
+**Planned Features**
+
+The following features are planned for future releases:
+
+- Barcode and QR Code scanning
+- Purchase Order Management
+- Email notifications
+- Invoice PDF generation
+- CSV / Excel import and export
+- Multi-store inventory management
+- AI-powered demand forecasting
+- Mobile application
+- Offline mode
+- Third-party accounting integrations
+
+---
 
 **Technologies Used**
-Frontend: React.js, Next.js, TypeScript
-Backend: Node.js, Express, MongoDB (or other databases)
-Authentication: JWT, OAuth
-Deployment: Docker, AWS, Heroku
+
+## Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+## Backend
+
+- Node.js
+- Express.js
+
+## Database
+
+- PostgreSQL
+- Prisma ORM
+
+## Authentication
+
+- JSON Web Tokens (JWT)
+- bcrypt
+
+## Development Tools
+
+- Git & GitHub
+- ESLint
+- Prettier
+- Postman
+
+## Deployment
+
+- Vercel (Frontend)
+- Railway / Render (Backend)
+- Neon PostgreSQL
+
+---
+
+**Project Structure**
+
+```
+stockease
+│
+├── frontend
+│   ├── app
+│   ├── components
+│   ├── hooks
+│   ├── services
+│   ├── types
+│   └── utils
+│
+├── backend
+│   ├── src
+│   │   ├── controllers
+│   │   ├── routes
+│   │   ├── services
+│   │   ├── middleware
+│   │   ├── repositories
+│   │   ├── utils
+│   │   └── config
+│   └── prisma
+│
+├── docs
+│
+├── README.md
+│
+└── LICENSE
+```
+---
 
 **Installation**
 **Clone the repository:**
 git clone https://github.com/your-Doreen456/stockease.git
 
+**Navigate to the project**
+cd stockease
+
 **Install dependencies:**
 cd stockease
 npm install
-Configure environment variables (e.g., database URL, API keys) in .env file.
+
+**Configure Environment Variables**
+
+Create a `.env` file inside the backend directory and configure the following variables:
+
+```env
+DATABASE_URL=
+JWT_SECRET=
+PORT=
+```
 
 **Run the development server:**
 npm run dev
-Open the app in your browser at http://localhost:3000.
 
-**Deployment**
-StockEase can be deployed on various platforms, including AWS, Heroku, or Docker.
+The application will be available at:
 
-**Deploy on AWS (Example)**
-Create an S3 bucket for storing static assets.
-Set up an EC2 instance with Node.js installed.
-Use Docker to containerize the application and deploy it on ECS.
-Set up a CloudFront distribution for faster content delivery.
+```
+Frontend: http://localhost:3000
+
+Backend: http://localhost:5000
+```
+---
+
+**API Overview**
+
+Example API endpoints:
+
+| Method | Endpoint | Description |
+|----------|---------------------------|-------------------------|
+| POST | /api/auth/login | User login |
+| POST | /api/auth/register | Register user |
+| GET | /api/products | Retrieve products |
+| POST | /api/products | Create product |
+| PUT | /api/products/:id | Update product |
+| DELETE | /api/products/:id | Delete product |
+| GET | /api/sales | Retrieve sales |
+| POST | /api/sales | Create sale |
+
+---
+
+**Screenshots**
+
+Screenshots will be added as development progresses.
+
+- Login Page
+- Dashboard
+- Product Management
+- Inventory
+- Sales
+- Reports
+
+---
+
+**Future Improvements**
+
+- Unit Testing
+- Integration Testing
+- CI/CD Pipeline using GitHub Actions
+- Docker Support
+- API Documentation with Swagger
+- Performance Optimization
+- Progressive Web App (PWA)
+
+---
 
 **Contributing**
-Fork the repository.
-Create a new branch for your feature or bugfix.
-Make your changes and ensure the code is well-tested.
-Submit a pull request with a detailed description of your changes.
+
+Contributions, suggestions, and feedback are welcome.
+
+Please open an issue or submit a pull request if you would like to contribute.
+
+---
 
 **License**
+
 This project is licensed under the MIT License.
+
+---
+
+**Author**
+
+**Doreen Marcus**
+
+Software Developer | Full Stack Developer
+
+GitHub: https://github.com/Doreen456
+
+---
+
+⭐ If you find this project useful, consider giving it a star on GitHub!
 
